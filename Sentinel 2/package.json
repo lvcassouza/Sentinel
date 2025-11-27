@@ -1,0 +1,23 @@
+{
+  "name": "sentinel-auth-api",
+  "version": "1.0.0",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "NODE_ENV=test jest --runInBand",
+    "test:integration": "RUN_DB_INTEGRATION=1 DB_PORT=5433 DB_DATABASE=auth_test_db NODE_ENV=test jest --runInBand tests/integration/auth.integration.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.0",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.12.0",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.1.4"
+  }
+}
